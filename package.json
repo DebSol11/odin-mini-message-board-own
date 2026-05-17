@@ -1,0 +1,25 @@
+{
+  "name": "odin-mini-message-board-own",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DebSol11/odin-mini-message-board-own.git"
+  },
+  "keywords": [],
+  "author": "example_user",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DebSol11/odin-mini-message-board-own/issues"
+  },
+  "homepage": "https://github.com/DebSol11/odin-mini-message-board-own#readme",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
+}
