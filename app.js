@@ -1,7 +1,17 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello, world!"));
+const indexRouter = require("./routes/indexRouter");
+const newMessageRouter = require("./routes/newMessageRouter");
+
+// app.get("/", (req, res) => {
+//   console.log("Here");
+//   res.send("hi");
+// });
+
+
+app.use("/", indexRouter);
+app.use("/new", newMessageRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, (error) => {
