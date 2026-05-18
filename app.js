@@ -3,6 +3,7 @@ const app = express();
 
 const indexRouter = require("./routes/indexRouter");
 const newMessageRouter = require("./routes/newMessageRouter");
+const openMessageRouter = require("./routes/openMessageRouter");
 
 const path = require("node:path");
 
@@ -13,7 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
 app.use("/new", newMessageRouter);
-
+app.use("/:user", openMessageRouter)
+ 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, (error) => {
   // This is important!
