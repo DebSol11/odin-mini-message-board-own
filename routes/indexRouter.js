@@ -5,15 +5,19 @@ const messages = [
   {
     text: "Hi there!",
     user: "Amando",
-    added: new Date()
+    added: new Date(),
   },
   {
     text: "Hello World!",
     user: "Charles",
-    added: new Date()
-  }
+    added: new Date(),
+  },
 ];
 
-indexRouter.get("/", (req, res) => res.render("index", { title: "Mini Messageboard", messages: messages }));
+indexRouter.get("/", (req, res) =>
+  res.render("index", { title: "Mini Messageboard", messages: messages }),
+);
 
 module.exports = indexRouter;
+// Exporting a variable in node.js
+module.exports.messages = messages;
