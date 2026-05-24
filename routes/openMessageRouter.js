@@ -1,5 +1,4 @@
 const { Router } = require("express");
-// const { getAuthorById } = require('../controllers/authorController');
 
 const openMessageRouter = Router();
 
