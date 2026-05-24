@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
 app.use("/new", newMessageRouter);
-app.use("/:user", openMessageRouter)
+app.use("/authors", openMessageRouter)
  
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, (error) => {

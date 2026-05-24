@@ -12,7 +12,11 @@ newMessageRouter.post("/", (req, res) => {
   console.log(req.body.authorName);
   console.log(req.body.messageText);
   console.log(messages);
-  messages.push({ text: messageData, user: authorData, added: new Date() });
+  messages.push({
+    text: messageData,
+    user: authorData,
+    added: new Date(),
+  });
   console.log(messages);
   res.redirect("/");
 });

@@ -12,12 +12,22 @@ const messages = [
     user: "Charles",
     added: new Date(),
   },
+  {
+    text: "Hello Michael!",
+    user: "Michael",
+    added: new Date(),
+  },
 ];
+
+// async function getUserByName(authorName) {
+//   return messages.find((message) => message.user === authorName);
+// }
 
 indexRouter.get("/", (req, res) =>
   res.render("index", { title: "Mini Messageboard", messages: messages }),
 );
 
 module.exports = indexRouter;
+// module.exports = { getUserByName };
 // Exporting a variable in node.js
 module.exports.messages = messages;
