@@ -19,13 +19,13 @@ const messages = [
   },
 ];
 
-// async function getUserByName(authorName) {
-//   return messages.find((message) => message.user === authorName);
-// }
-
 indexRouter.get("/", (req, res) =>
   res.render("index", { title: "Mini Messageboard", messages: messages }),
 );
+
+indexRouter.get("/Amando", (req, res) => {
+  res.render("message", { title: req.params.user, messages : messages})
+})
 
 module.exports = indexRouter;
 // module.exports = { getUserByName };
