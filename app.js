@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 
+const { messages } = require("./routes/indexRouter");
 const indexRouter = require("./routes/indexRouter");
 const newMessageRouter = require("./routes/newMessageRouter");
 
@@ -13,6 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
 app.use("/new", newMessageRouter);
+
+app.get("/:user", (req, res) => {
+  const userName = req.params.user;
+  console.log(userName);
+  res.render("message", { title: userName, messages : messages})
+});
  
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, (error) => {

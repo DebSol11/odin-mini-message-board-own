@@ -20,12 +20,8 @@ const messages = [
 ];
 
 indexRouter.get("/", (req, res) =>
-  res.render("index", { title: "Mini Messageboard", messages: messages }),
+  res.render("index", { title: "Mini Messageboard", messages: messages, userName: req.params.user }),
 );
-
-indexRouter.get("/Amando", (req, res) => {
-  res.render("message", { title: req.params.user, messages : messages})
-})
 
 module.exports = indexRouter;
 // module.exports = { getUserByName };
