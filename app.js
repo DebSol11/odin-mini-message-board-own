@@ -17,10 +17,9 @@ app.use("/new", newMessageRouter);
 
 app.get("/:user", (req, res) => {
   const userName = req.params.user;
-  console.log(userName);
-  res.render("user", { title: userName, messages : messages})
+  res.render("user", { title: userName, messages: messages });
 });
- 
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, (error) => {
   // This is important!
